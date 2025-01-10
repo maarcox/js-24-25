@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Primeros Pasos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <script src='js/main.js'></script>
+    <script>
+        function saludar(){
+            //alert("Has seleccionado saludar!!!");
+
+            // CSS -> Para llamar a un elemento en css es con # 
+            // JS -> PAra llamar a un elemento html en js es con document.getElementByID("")
+            // JS -> let sirve para guardar una variable
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            if(email==="" && password ===""){
+                alert("Has dejado las casillaS vacia!!");
+            }
+            if(email==="" && password !=""){
+                alert("Password relleno, Email vacio");
+            }
+            if(email!="" && password ===""){
+                alert("Email relleno, Password vacio");
+            }
+
+            if(email!="" && password !=""){
+                alert("Login Correcto");
+            }
+
+        }
+    </script>
+</head>
+<body>
+   <h1>PRIMERA FUNCION JS</h1>
+
+   <h4>Email
+   <input type="text" id="email"></h4>
+   <h4>Password
+   <input type="text" id="password"></h4>
+   <input type="button" value="Enviar" onclick="saludar();"> 
+</body>
+</html>
